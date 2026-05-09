@@ -18,7 +18,7 @@ class TaskRequest extends FormRequest
         return [
             'task_name'   => ['required', 'string', 'max:50'],
             'description' => ['nullable', 'string'],
-            'priority'    => ['required'|'in:Urgent and Important,Important but Not Urgent,Urgent but Not Important,Not Urgent or Important'],
+            'priority'    => ['required', 'in:Urgent and Important,Important but Not Urgent,Urgent but Not Important,Not Urgent or Important'],
             'deadline'    => ['required', 'date'],
             'status'      => ['required', 'in:todo,in_progress,completed,submitted'],
         ];
