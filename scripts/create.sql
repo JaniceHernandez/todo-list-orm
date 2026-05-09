@@ -4,7 +4,7 @@ CREATE TABLE `tasks` (
 	`description` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
 	`priority` ENUM('Urgent and Important','Important but Not Urgent','Urgent but Not Important','Not Urgent or Important') NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
 	`deadline` DATE NOT NULL,
-	`status` VARCHAR(20) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`status` ENUM('todo','in_progress','completed','submitted') NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
 	`created_at` TIMESTAMP NOT NULL,
 	`updated_at` TIMESTAMP NOT NULL,
 	`deleted_at` TIMESTAMP NULL DEFAULT NULL,

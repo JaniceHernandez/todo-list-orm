@@ -49,7 +49,7 @@ class TaskController extends Controller
     {
         $task = Task::findOrFail($id);
         $task->delete();
-        return redirect()->back()->with('success', 'Task moved to trash.');
+        return redirect()->back()->with('success', 'Task moved to deleted.');
     }
 
     // Restore a single soft-deleted task

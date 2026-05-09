@@ -71,7 +71,7 @@
                             <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Move this task to trash?')"><i class="fa fa-trash"></i></button>
+                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Move this task to deleted?')"><i class="fa fa-trash"></i></button>
                             </form>
                         </td>
                     </tr>
